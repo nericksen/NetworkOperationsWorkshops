@@ -140,7 +140,6 @@ This will help simplify the inputs that are needed from an end user.
 
 ![new incident layout form screenshot](imgs/layout-new.png)
 
-![screenshot of incident layout](imgs/layout-new.png)
 
 Layouts help analysts quickly view the information that is most relevant to them and then have the ability to take action.
 Feel free to modify the layout in additional ways and view the documentation for what's possible.
