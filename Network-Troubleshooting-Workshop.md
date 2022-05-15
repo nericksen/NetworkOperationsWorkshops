@@ -12,19 +12,19 @@ The use cases in this workshop will focus on troubleshooting network devices by 
 
 ## Concepts
 
-* Marketplace and Integrations
- - https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/marketplace
- - https://xsoar.pan.dev/marketplace
-* Running Commands
- - https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/cortex-xsoar-overview/use-the-command-line-interface
-* Context
- - https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/incidents/incident-management/incident-context-data
-* Building Playbooks
- - https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/playbooks
-* Creating a Use case
-  - https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/incidents/incident-lifecycle
-  - https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/incidents/customize-incident-view-layouts/create-an-incident-type
-  - https://docs.paloaltonetworks.com/cortex/cortex-xsoar/5-5/cortex-xsoar-admin/incidents/incidents-management/customize-incident-view-layouts/customize-an-incident-type-layout
+### Marketplace and Integrations
+ * https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/marketplace
+ * https://xsoar.pan.dev/marketplace
+### Running Commands
+ * https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/cortex-xsoar-overview/use-the-command-line-interface
+### Context
+ * https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/incidents/incident-management/incident-context-data
+### Building Playbooks
+ * https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/playbooks
+### Creating a Use case
+  * https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/incidents/incident-lifecycle
+  * https://docs.paloaltonetworks.com/cortex/cortex-xsoar/6-6/cortex-xsoar-admin/incidents/customize-incident-view-layouts/create-an-incident-type
+  * https://docs.paloaltonetworks.com/cortex/cortex-xsoar/5-5/cortex-xsoar-admin/incidents/incidents-management/customize-incident-view-layouts/customize-an-incident-type-layout
 
 
 ## Use Case 1 - Host Alive
