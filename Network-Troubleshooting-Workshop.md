@@ -34,7 +34,7 @@ When there are networking issues with a device it is common practice to run trou
 XSOAR has builtin automations called !Ping and !PortListenCheck to assist in determining connectivity to devices on your network.
 
 
-#### Executing Commands and Context
+### Executing Commands and Context
 First let's become familiar with executing commands within XSOAR.
 Login to the platform and type `!` into the CLI at the bottom of the application window.
 This will prompt and show you the commands which are available in the platform.
@@ -71,7 +71,7 @@ Note you can clear the context and start again by running `!DeleteContext`.
 Since no values are returned to context if a host is not reachable we will use this behavior when building the playbook logic.
 
 
-#### Playbook Editor
+### Playbook Editor
 
 Open the Playbook editor in the left hand menu to begin orchestrating automations and tasks into a workflow.
 
@@ -124,7 +124,7 @@ Run the playbook a couple times using different values to confirm it is working 
 ![screenshot complete playbook](imgs/playbook.png)
 
 
-#### Incident Type and Layout
+### Incident Type and Layout
 
 Whether an external ticket is ingested into the platform or an incident is manually created within XSOAR the assignment of an incident type can be used to determine the playbook that is run and the layout that is used.
 
@@ -158,7 +158,7 @@ Update the input for the `Host` input to be `${incident.hostname}`.
 Now the user supplied input will be used within the playbook.
 
 
-#### Trigger XSOAR Investigation
+### Trigger XSOAR Investigation
 Everything is now ready to go for testing!
 Go to the incidents tab on the left hand menu, and select "New Incident".
 Start by selecting the new incident type previously created.
