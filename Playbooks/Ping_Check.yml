@@ -1,0 +1,185 @@
+id: 5fb8c4d9-f1fb-4874-89b4-334b4ac7a3f1
+version: 7
+vcShouldKeepItemLegacyProdMachine: false
+name: Ping Check
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    taskid: c4428b22-df08-4d32-81a3-51eec61ce900
+    type: start
+    task:
+      id: c4428b22-df08-4d32-81a3-51eec61ce900
+      version: -1
+      name: ""
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "1":
+    id: "1"
+    taskid: 62782327-adad-4772-8bfe-95c42df0065a
+    type: regular
+    task:
+      id: 62782327-adad-4772-8bfe-95c42df0065a
+      version: -1
+      name: Ping
+      description: Pings an IP or url address, to verify it's up
+      scriptName: Ping
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "2"
+    scriptarguments:
+      address:
+        simple: ${inputs.Host}
+    continueonerror: true
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 195
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "2":
+    id: "2"
+    taskid: f4ea3c8a-4105-442e-8f0e-8a6b8cba80b6
+    type: condition
+    task:
+      id: f4ea3c8a-4105-442e-8f0e-8a6b8cba80b6
+      version: -1
+      name: Is the host online?
+      type: condition
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#default#':
+      - "4"
+      "yes":
+      - "3"
+    separatecontext: false
+    conditions:
+    - label: "yes"
+      condition:
+      - - operator: isExists
+          left:
+            value:
+              simple: ${Ping.ret_code}
+            iscontext: true
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 370
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "3":
+    id: "3"
+    taskid: 552eb9b6-8ace-428f-8c17-224330493a2a
+    type: regular
+    task:
+      id: 552eb9b6-8ace-428f-8c17-224330493a2a
+      version: -1
+      name: Close Investigation
+      description: commands.local.cmd.close.inv
+      script: Builtin|||closeInvestigation
+      type: regular
+      iscommand: true
+      brand: Builtin
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "4":
+    id: "4"
+    taskid: 872b33aa-670d-4edf-87ce-f2dc688036f6
+    type: regular
+    task:
+      id: 872b33aa-670d-4edf-87ce-f2dc688036f6
+      version: -1
+      name: Manual Review
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "3"
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 162.5,
+          "y": 545
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 765,
+        "width": 492.5,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
+inputs:
+- key: Host
+  value:
+    simple: ${incident.hostname}
+  required: false
+  description: ""
+  playbookInputQuery: null
+outputs: []
