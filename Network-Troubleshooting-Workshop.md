@@ -39,7 +39,7 @@ First let's become familiar with executing commands within XSOAR.
 Login to the platform and type `!` into the CLI at the bottom of the application window.
 This will prompt and show you the commands which are available in the platform.
 
-![screenshot of the CLI](imgs/warroom.png)
+![screenshot of the CLI](imgs/warroom2.png)
 
 Additional functionality can be enabled by installing and configuring additional integrations.
 These integrations are found in the XSOAR marketplace and are covered in more depth in the next use case.
