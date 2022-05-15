@@ -177,16 +177,41 @@ Try different inputs to trigger the different conditional branches.
 ## Use Case 2
 Topics Covered: Integrations, Filters and Transformers, Data Collection Tasks
 
-Use the Netmiko integration to ssh to a host and run a command
+
+Integrations extend the capabilites of the XSOAR platform by adding additional commands.
+These commands can perform API actions and execute commands over SSH.
+The netmiko library is a popular Python library for executing commands over SSH with Python.
+
+Let's use the Netmiko integration to ssh to a host and run a command.
+Verify the `Netmiko` integration is installed by going to `Settings >> Integrations` and searching for it.
+You can open the instance settings and hit the "test" button to verify the host can be connected to.
+This integration should already be configured with an SSH key and the IP address should be provided for testing in the workshop.
 
 
+Run a command on a Linux based host by running
+```
+!netmiko-cmds cmds=`ip addr show` 
+```
 
-!PortListenCheck 
-!URLSSLVerification
+Let's check if the MTU of the `eth0` interface is greater than 5000.
+Once the netmiko command is run we can see the raw output saved into context under `${Netmiko.Output}`.
+
+Using Filters and transformers we can parse this raw output.
+
+![screenshot of filters and transformers](imgs/filters.png)
+
+and set it to a new key. Then a conditional will check the value is greater than 5000.
+
+You can add a data collection task to prompt the end user via email, slack, teams or directly in the platform to determine if MTU needs to be increased.
+
+![Data collection](imgs/data-collection.png)
 
 
-Netmiko to SSH to a host and then parse linux commands with XSOAR transformers. 
-
+This playbook can be modified to also have inputs as in the previous use case so that it can be added as a subplaybook to be used elsewhere!
 
 ## Conclusion
+The modularity and flexibilty of the Cortex XSOAR platform allows for a wide range of use cases to be implemented.
+End user experiences for each one of these use cases can be customized based on the needs of the organizations.
+Both API and SSH commands can be issued and the results can be taken to influence the desicion tree within a playbook.
+Playbooks can be reused and generalized for efficient and effective network troubleshooting.
 
