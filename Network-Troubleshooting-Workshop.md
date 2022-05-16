@@ -79,7 +79,7 @@ The high level flow for this first playbook will be to check if the host respond
 
 Here is a high level use case flow diagram
 
-[insert flow diagram]
+![insert flow diagram](imgs/Ping.png)
 
 Create a new playbook in the XSOAR playbook tab and the playbook editor and debugger will automatically be opened.
 You can start adding tasks by dragging and dropping them, or selecting a new task from the task library.
