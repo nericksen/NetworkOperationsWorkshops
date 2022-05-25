@@ -8,7 +8,7 @@ Under the hood XSOAR is powered by Python scripts and Docker containers so it is
 By providing a simple drag and drop interface automations and data collection tasks can be orchestrated to create playbooks which execute workflows for each particular use case in your organization.
 These workflows can be triggered by fetching cases from external ticketing systems or manually from within the XSOAR platform.
 
-The use cases in this workshop will focus on troubleshooting network devices by running various commands from XSOAR such as ping and telnet.  SSH will also be used to login to remote devices and run additional commands on the device itself.  An incident type for each use case will be created as well as custom fields and layouts to present the data to an end user.  Incidents will be created manually in the XSOAR incident to then trigger the appropriate workflows.
+The use cases in this workshop will focus on troubleshooting network devices by running various commands from XSOAR such as ping and telnet.  SSH will also be used to login to remote devices and run additional commands on the device itself.  An incident type for each use case will be created as well as custom fields and layouts to present the data to an end user.  Incidents will be created manually in the XSOAR platform to then trigger the appropriate workflows.
 
 ## Concepts
 
